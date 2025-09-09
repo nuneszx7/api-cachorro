@@ -25,15 +25,24 @@ async function buscarImagens (raca) {
 
     }
 
-    const resultados = imagens.resultados
+    const resultados = imagens.message
 
-    resultados.map((resultado) => {
+
+    // url.forEach(url => {
+
+    //     const criarFotoCachorro = buscarImagens(url)
+    //     CanvasGradient.appendChild(criarFotoCachorro)
+
+    // });
+
+
+    resultados.forEach((urlImagem) => {
 
         const imagem = document.createElement('img')
-        imagem.src = resultado.url
+        imagem.src = urlImagem
 
         const linkImagem = document.createElement('a')
-        linkImagem.href = resultado.url
+        linkImagem.href = urlImagem
         linkImagem.target = '_blank'
 
         linkImagem.appendChild(imagem)
@@ -53,15 +62,8 @@ async function buscarImagens (raca) {
 
 
     }
+
+    buscarImagens()
         
-    // console.log(imagens.message)
-    // return imagens.message
 
-
-// buscarImagens('beagle')
-
-
-
-// const arrayImagens = await buscarImagens()
-// console.log(arrayImagens)
 
