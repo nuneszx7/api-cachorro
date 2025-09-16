@@ -50,3 +50,17 @@ body .buscarImagens button:hover {
     object-fit: cover;
     border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+
+
+
+    #resultado-da-pesquisa {
+        grid-template-columns: 1fr;
+    }
+}
